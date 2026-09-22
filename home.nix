@@ -30,9 +30,9 @@ programs.starship = {
 };
          
    imports = [
-   ~/.config/home-manager/fastfetch.nix
-   ~/.config/home-manager/zsh.nix
-   ~/.config/home-manager/ghostty.nix
+   /modules/shell/fastfetch.nix
+   /modules/shell/zsh.nix
+   /modules/shell/ghostty.nix
       
   ]; 
 
