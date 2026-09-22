@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
       /etc/nixos/hardware-configuration.nix
       ./modules/hyprland.nix
+      ./modules/kde.nix
       ./modules/audio.nix
     ];
 
