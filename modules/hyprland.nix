@@ -11,7 +11,6 @@ services.displayManager.sddm.enable = true;
   };
    environment.systemPackages = with pkgs; [
     ghostty
-    zscroll
      hyprpolkitagent
      xdg-desktop-portal-hyprland
      dconf
