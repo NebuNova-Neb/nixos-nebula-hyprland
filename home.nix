@@ -16,7 +16,7 @@
     starship
     htop
     vlc
-    libreoffice-fresh
+    libreoffice
     gimp
     tree
     discord
