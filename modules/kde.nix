@@ -26,9 +26,5 @@ environment.systemPackages = with pkgs; [
   wl-clipboard # Wayland copy/paste support
 
 ];
-  };
-   environment.systemPackages = with pkgs; [
-       
 
-  ];
 }

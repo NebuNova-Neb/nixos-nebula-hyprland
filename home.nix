@@ -14,6 +14,7 @@
   home.packages = with pkgs; [
     fastfetch
     starship
+    tmux
     htop
     vlc
     libreoffice

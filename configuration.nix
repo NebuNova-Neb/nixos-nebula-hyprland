@@ -9,7 +9,6 @@
     [ # Include the results of the hardware scan.
       /etc/nixos/hardware-configuration.nix
       ./modules/hyprland.nix
-      ./modules/kde.nix
       ./modules/audio.nix
     ];
 
@@ -63,6 +62,15 @@
   # Enable touchpad support (enabled default in most desktopManager).
   # services.libinput.enable = true;
 
+services.tailscale = {
+    # Enable tailscale at startup
+    enable = true;
+};
+
+# configuration.nix
+
+  security.pam.services.nebula.kwallet.package = pkgs.kdePackages.kwallet-pam;
+
 # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -70,7 +78,6 @@
      isNormalUser = true;
      extraGroups = [ "wheel" "input" "networkmanager" ]; # Enable ‘sudo’ for the user.  
    };
-   
   programs.zsh.enable = true;
 users.users.nebula.shell = pkgs.zsh;
  
@@ -93,13 +100,24 @@ users.users.nebula.shell = pkgs.zsh;
      vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
      wget
      curl
+     dracula-theme
+     dracula-qt5-theme
+     dracula-icon-theme
      firefox
      home-manager
+     kdePackages.kwallet
+     kdePackages.kwallet-pam
+     kdePackages.kwalletmanager
+     kdePackages.kio
+     kdePackages.kio-fuse
+     kdePackages.kio-extras
+     kdePackages.qtsvg
      unzip
      tailscale
      code
      git
      tealdeer
+     pam
      xclip
      bat
    ];
